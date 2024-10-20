@@ -11,7 +11,7 @@
 ## `npm install`
 
 если запуск json-server отличный от localhost:3005, то\
-отредактировать файл config-server.js с адресом и портом json-server\
+отредактировать файл config-server.js с адресом и портом json-server
 
 # запуск приложения
 
