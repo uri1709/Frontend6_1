@@ -20,9 +20,7 @@ const Task = () => {
 	useEffect(() => {
 		setIsLoading(true);
 
-		//расскоментить для вызова сервиса https://jsonplaceholder.typicode.com/todos
-		// fetch('https://jsonplaceholder.typicode.com/todos')
-		fetch(`http://${serverJSON.host}:${serverJSON.port}/todos/${id}`)
+		fetch(`http://${serverJSON.host}:${serverJSON.port}/todos/${id}`) //++расскоментить для вызова сервиса
 			.then((loadedData) => loadedData.json())
 			.then((loadedTask) => {
 				setTask(loadedTask);
@@ -58,7 +56,6 @@ const Task = () => {
 			.finally(() => setIsUpdating(false)); //создание закончено
 	};
 
-	// const deleteTodo = (id) => {
 	const deleteTask = () => {
 		setIsDeleting(true);
 		fetch(`http://${serverJSON.host}:${serverJSON.port}/todos/${id}`, {

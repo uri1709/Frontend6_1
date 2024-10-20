@@ -47,9 +47,8 @@ const TodoList = () => {
 		// 	}, 2500);
 		// })
 
-		//расскоментить для вызова сервиса https://jsonplaceholder.typicode.com/todos
-		// fetch('https://jsonplaceholder.typicode.com/todos')
-		fetch(`http://${serverJSON.host}:${serverJSON.port}/todos`)
+		// fetch('https://jsonplaceholder.typicode.com/todos') //--вызова сервиса https://jsonplaceholder.typicode.com/todos
+		fetch(`http://${serverJSON.host}:${serverJSON.port}/todos`) //++json-server
 			.then((loadedData) => loadedData.json())
 			.then((loadedTodos) => {
 				setTodos(loadedTodos);
